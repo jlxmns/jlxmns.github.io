@@ -32,11 +32,9 @@ const BIRDS_RAW = [
     {"model":"BirdSound.bird","pk":32,"fields":{"common_name":"Surf Scoter","scientific_name":"Melanitta perspicillata","order":"Anseriformes","family":"Anatidae","wingspan":"77.0","weight":null,"length":"60.0","habitat":null,"conservation_status":"Low Concern","image":"images/photo-1645799142571-5e075c44dbbf.jpg","description":null,"created_at":"2026-04-07T17:07:22.981Z","updated_at":"2026-04-07T17:07:22.981Z"}}
 ];
 
-// ─── Normalize raw Django fixture format into flat bird objects ────────────
 function loadBirds() {
     const stored = localStorage.getItem('birds');
     if (stored) return JSON.parse(stored);
-    // Seed from hardcoded data on first load
     const birds = BIRDS_RAW.map(entry => ({ id: entry.pk, ...entry.fields }));
     localStorage.setItem('birds', JSON.stringify(birds));
     return birds;
@@ -46,10 +44,8 @@ function saveBirds(birds) {
     localStorage.setItem('birds', JSON.stringify(birds));
 }
 
-// Expose globally so add/edit pages can call this
 window.BirdStore = { load: loadBirds, save: saveBirds };
 
-// ─── Theme toggle ──────────────────────────────────────────────────────────
 (function () {
     const t = document.querySelector('[data-theme-toggle]');
     const r = document.documentElement;
@@ -71,7 +67,6 @@ window.BirdStore = { load: loadBirds, save: saveBirds };
     }
 })();
 
-// ─── Conservation status helpers ───────────────────────────────────────────
 const STATUS_MAP = {
     EX: { label: 'Extinct',                  cls: 'badge-ex', dot: '#6b6454' },
     EW: { label: 'Extinct in the Wild',      cls: 'badge-ew', dot: '#8b2020' },
@@ -122,7 +117,6 @@ function getStatusBadge(raw) {
     </span>`;
 }
 
-// ─── Bird card renderer ────────────────────────────────────────────────────
 function placeholderSVG() {
     return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="24" cy="24" r="22" fill="var(--color-surface-dynamic)"/>
@@ -204,7 +198,6 @@ function createCard(bird, index) {
     return card;
 }
 
-// ─── Render & filter logic ─────────────────────────────────────────────────
 const grid        = document.getElementById('bird-grid');
 const emptyState  = document.getElementById('empty-state');
 const resultCount = document.getElementById('result-count');
