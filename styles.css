@@ -16,7 +16,7 @@
     --color-text-inverse: #f8f5ec;
 
     --color-primary: #2d6a4f;
-    --color-primary-hover: #1b5438;
+    --color-primary-hover: #9ecbb5;
     --color-primary-active: #103d27;
     --color-primary-highlight: #c8ddd5;
 
@@ -531,4 +531,167 @@ button {
 .empty-state p {
     max-width: 36ch;
     font-size: 0.9rem;
+}
+
+@media (max-width: 980px) {
+    .header-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .search-wrap {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .site-logo {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .filters-inner {
+        gap: 0.5rem;
+    }
+
+    .main-content {
+        padding-top: 1.5rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .header-inner,
+    .hero-inner,
+    .filters-inner,
+    .main-content {
+        padding-inline: 1rem;
+    }
+
+    .header-row {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .site-logo {
+        justify-content: flex-start;
+        width: auto;
+        flex: 0 0 auto;
+    }
+
+    .site-logo span {
+        display: none;
+    }
+
+    .btn-add-bird-label {
+        display: none;
+    }
+
+    .search-wrap {
+        order: 0;
+        width: auto;
+        max-width: none;
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .btn-add-bird,
+    .theme-toggle {
+        width: auto;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .filters-bar {
+        padding: 0.85rem 1rem;
+    }
+
+    .filters-inner {
+        justify-content: center;
+    }
+
+    .filter-btn {
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .hero-band {
+        padding: 2rem 1rem 1.75rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.4rem, 6vw, 2.2rem);
+    }
+
+    .bird-grid {
+        gap: 1rem;
+    }
+
+    .card-body {
+        padding: 0.85rem;
+    }
+
+    .card-footer,
+    .card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    .header-row {
+        gap: 0.75rem;
+    }
+
+    .header-inner {
+        padding-inline: 0.9rem;
+    }
+
+    .search-input {
+        padding: 0.5rem 0.75rem 0.5rem 2rem;
+    }
+
+    .btn-add-bird,
+    .theme-toggle {
+        padding: 0.55rem 0.95rem;
+    }
+
+    .hero-band {
+        padding: 1.75rem 0.9rem 1.5rem;
+    }
+
+    .filters-bar {
+        padding: 0.75rem 0.9rem;
+    }
+
+    .filters-inner {
+        gap: 0.35rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.3rem, 7vw, 1.85rem);
+    }
+
+    .card-name {
+        font-size: 0.98rem;
+    }
+
+    .card-sci-name {
+        font-size: 0.72rem;
+    }
+
+    .card-footer,
+    .card-meta {
+        width: 100%;
+    }
+
+    .habitat-pill {
+        padding: 0.2rem 0.5rem;
+    }
 }
