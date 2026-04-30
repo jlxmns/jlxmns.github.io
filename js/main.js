@@ -1,4 +1,4 @@
-import { BIRDS_RAW, STATUS_MAP, STATUS_NAME_TO_CODE } from './data.js';
+import { BIRDS_RAW, STATUS_MAP, STATUS_NAME_TO_CODE } from '../data/data.js';
 
 function loadBirds() {
     const stored = localStorage.getItem('birds');
