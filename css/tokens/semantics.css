@@ -1,0 +1,57 @@
+:root {
+    --color-bg: var(--color-stone-150);
+    --color-surface: var(--color-stone-100);
+    --color-surface-2: var(--color-stone-50);
+    --color-surface-offset: var(--color-stone-200);
+    --color-surface-dynamic: var(--color-stone-300);
+    --color-divider: var(--color-stone-400);
+    --color-border: var(--color-stone-500);
+  
+    --color-text: var(--color-stone-900);
+    --color-text-muted: var(--color-stone-800);
+    --color-text-faint: var(--color-stone-700);
+    --color-text-inverse: var(--color-stone-100);
+  
+    --color-primary: var(--color-green-700);
+    --color-primary-hover: var(--color-green-400);
+    --color-primary-active: var(--color-green-900);
+    --color-primary-highlight: var(--color-green-100);
+  
+    --color-amber: var(--color-amber-700);
+    --color-amber-highlight: var(--color-amber-200);
+  
+    --color-red-status: var(--color-red-800);
+    --color-red-highlight: var(--color-red-200);
+  
+    --color-blue-status: var(--color-blue-800);
+    --color-blue-highlight: var(--color-blue-200);
+  }
+  
+  [data-theme="dark"] {
+    --color-bg: var(--color-black-950);
+    --color-surface: var(--color-black-900);
+    --color-surface-2: var(--color-black-850);
+    --color-surface-offset: var(--color-black-800);
+    --color-surface-dynamic: var(--color-black-700);
+    --color-divider: var(--color-black-600);
+    --color-border: var(--color-black-500);
+  
+    --color-text: #d8d2c0;
+    --color-text-muted: #ada288;
+    --color-text-faint: #5a5448;
+    --color-text-inverse: #2a2820;
+  
+    --color-primary: var(--color-green-600);
+    --color-primary-hover: #3a9068;
+    --color-primary-active: #2a7050;
+    --color-primary-highlight: #213028;
+  
+    --color-amber: var(--color-amber-500);
+    --color-amber-highlight: #3a2818;
+  
+    --color-red-status: var(--color-red-500);
+    --color-red-highlight: #2e1818;
+  
+    --color-blue-status: var(--color-blue-500);
+    --color-blue-highlight: #182438;
+  }
