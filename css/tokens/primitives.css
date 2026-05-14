@@ -1,3 +1,11 @@
+/*
+  Primitive tokens = raw design values.
+  These variables define the palette only, with no UI meaning attached.
+
+  Use semantic tokens in components.
+  Example: semantics.css maps --color-green-700 to --color-primary.
+*/
+
 :root {
     --color-stone-50: #fffdf8;
     --color-stone-100: #faf8f2;
