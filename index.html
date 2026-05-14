@@ -32,15 +32,20 @@
             </a>
 
             <div class="search-wrap">
-                <i data-lucide="search" class="search-icon"></i>
+                <i data-lucide="search" class="search-icon" aria-hidden="true"></i>
+                <label for="search" class="sr-only">Search birds</label>
                 <input
-                    id="search"
-                    class="search-input"
-                    type="search"
-                    placeholder="Search birds…"
-                    aria-label="Search birds"
+                  id="search"
+                  class="search-input"
+                  type="search"
+                  placeholder="Search birds…"
+                  aria-describedby="search-help"
                 >
-            </div>
+              </div>
+              
+              <p id="search-help" class="sr-only">
+                Type a bird name to filter the list.
+              </p>
 
             <a href="/bird/add" class="btn-add-bird" aria-label="Add bird">
                 <i data-lucide="plus"></i>
@@ -85,6 +90,28 @@
         <p>Try a different search term or remove the status filter.</p>
     </div>
 </main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p class="footer-title">Bird Guide</p>
+          <p class="footer-text">
+            Helping birders identify and protect avian species worldwide.
+          </p>
+        </div>
+  
+        <nav class="footer-nav" aria-label="Footer">
+          <ul class="footer-links" role="list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <p class="footer-meta">© 2026 Bird Guide</p>
+    </div>
+  </footer>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

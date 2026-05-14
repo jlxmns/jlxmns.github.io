@@ -18,10 +18,10 @@
     --color-primary: #2d6a4f;
     --color-primary-hover: #9ecbb5;
     --color-primary-active: #103d27;
-    --color-primary-highlight: #c8ddd5;
+    --color-primary-highlight: #ddece7;
 
     --color-amber: #a05c1a;
-    --color-amber-highlight: #f0e0c8;
+    --color-amber-highlight: #f7f1e8;
     --color-red-status: #8b2020;
     --color-red-highlight: #f0cccc;
     --color-blue-status: #1a5480;
@@ -45,7 +45,7 @@
     --color-divider: #2e2c26;
     --color-border: #3a3830;
     --color-text: #d8d2c0;
-    --color-text-muted: #7a7260;
+    --color-text-muted: #ada288;
     --color-text-faint: #5a5448;
     --color-text-inverse: #2a2820;
     --color-primary: #52a882;

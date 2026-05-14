@@ -91,7 +91,7 @@
 .badge-lc { background: var(--color-primary-highlight); color: var(--color-primary); }
 .badge-nt { background: var(--color-blue-highlight);    color: var(--color-blue-status); }
 .badge-vu { background: var(--color-amber-highlight);   color: var(--color-amber); }
-.badge-en { background: oklch(from var(--color-amber) l c h / 0.15); color: color-mix(in oklch, var(--color-amber) 80%, var(--color-red-status)); }
+.badge-en { background: oklch(from var(--color-amber) l c h / 0.10); color: color-mix(in oklch, var(--color-amber) 80%, var(--color-red-status)); }
 .badge-cr { background: var(--color-red-highlight);     color: var(--color-red-status); }
 .badge-ew { background: oklch(from var(--color-red-status) l c h / 0.18); color: var(--color-red-status); }
 .badge-ex { background: color-mix(in oklch, var(--color-text-faint) 20%, transparent); color: var(--color-text-muted); }
@@ -561,3 +561,15 @@
         padding: 0.2rem 0.5rem;
     }
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
