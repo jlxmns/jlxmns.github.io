@@ -1,0 +1,16 @@
+/* Demanda 1 — Carta do cliente: legibilidade em projetor / sala (1920×1080, visualização à distância) */
+html {
+    font-size: clamp(16px, 1.1vw, 20px);
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: clamp(18px, 1.15vw, 22px);
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: clamp(19px, 0.95vw, 24px);
+    }
+}

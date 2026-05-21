@@ -28,11 +28,6 @@
     transform: translateY(-1px);
 }
 
-.bird-card:focus-visible {
-    outline: 3px solid var(--color-primary);
-    outline-offset: 3px;
-}
-
 .card-image-wrap {
     position: relative;
     width: 100%;

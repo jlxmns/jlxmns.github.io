@@ -15,6 +15,13 @@ function saveBirds(birds) {
 window.BirdStore = { load: loadBirds, save: saveBirds };
 
 (function () {
+    document.body.addEventListener('keydown', e => {
+        if (e.key === 'Tab') document.body.classList.add('using-keyboard');
+    });
+    document.body.addEventListener('mousedown', () => {
+        document.body.classList.remove('using-keyboard');
+    });
+
     const t = document.querySelector('[data-theme-toggle]');
     const r = document.documentElement;
     let d = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';

@@ -28,12 +28,6 @@ button {
     cursor: pointer;
 }
 
-:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 3px;
-    border-radius: var(--radius-sm);
-}
-
 ::selection {
     background: color-mix(in oklch, var(--color-primary) 25%, transparent);
     color: var(--color-text);

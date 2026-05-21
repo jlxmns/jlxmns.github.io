@@ -1,0 +1,32 @@
+/* Demanda 2 — Carta do cliente: foco visível ao navegar com Tab (tablet + teclado físico) */
+
+:where(a, button, input, [role="button"][tabindex="0"]):focus {
+    outline: none;
+}
+
+:where(a, button, input, [role="button"][tabindex="0"]):focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+.search-input:focus-visible {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-primary) 22%, transparent);
+}
+
+.filter-btn:focus-visible {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px color-mix(in oklch, var(--color-primary) 20%, transparent);
+}
+
+.filter-btn.active:focus-visible {
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-text-inverse) 35%, transparent);
+}
+
+.bird-card:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-primary) 25%, transparent);
+}

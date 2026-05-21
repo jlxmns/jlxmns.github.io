@@ -1,0 +1,10 @@
+/* Cascade layers — precedência: tokens → reset → base → layout → components → overrides */
+@layer tokens, reset, base, layout, components, overrides;
+
+@import url("./variables.css") layer(tokens);
+@import url("./reset.css") layer(reset);
+@import url("./typography-scale.css") layer(base);
+@import url("./keyboard-focus.css") layer(base);
+@import url("./layout.css") layer(layout);
+@import url("./base.css") layer(components);
+@import url("./utilities.css") layer(overrides);
