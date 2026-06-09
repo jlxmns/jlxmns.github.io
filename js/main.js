@@ -40,7 +40,7 @@ const grid        = document.getElementById('bird-grid');
 const emptyState  = document.getElementById('empty-state');
 const resultCount = document.getElementById('result-count');
 const searchInput = document.getElementById('search');
-const filterBtns  = document.querySelectorAll('.filter-btn');
+const filterBtns  = document.querySelectorAll('.filters__btn');
 
 let allBirds     = loadBirds();
 let activeFilter = 'all';
@@ -79,8 +79,8 @@ searchInput.addEventListener('input', e => {
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        filterBtns.forEach(b => b.classList.remove('filters__btn--active'));
+        btn.classList.add('filters__btn--active');
         activeFilter = btn.dataset.filter;
         render();
     });

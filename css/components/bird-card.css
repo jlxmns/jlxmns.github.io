@@ -1,0 +1,188 @@
+/* ── Componente: Bird Card ──────────────────────────────────────────
+   Bloco: .bird-card
+   Tokens consumidos: --color-surface, --color-surface-offset,
+                      --color-surface-dynamic, --color-text,
+                      --color-text-muted, --color-text-faint,
+                      --color-primary, --radius-xl, --radius-full,
+                      --font-display
+   Estados: :hover, :active (bird-card),
+            :hover (bird-card__image-wrap img)
+   Dependências: tokens de semântica e spacing
+   ────────────────────────────────────────────────────────────────── */
+
+.bird-card {
+    background: var(--color-surface);
+    border: 1px solid oklch(from var(--color-text) l c h / 0.1);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 200ms ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    animation: fadeUp 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.bird-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px oklch(0.2 0.05 130 / 0.14);
+    border-color: oklch(from var(--color-primary) l c h / 0.35);
+}
+
+.bird-card:active {
+    transform: translateY(-1px);
+}
+
+.bird-card__image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--color-surface-offset);
+}
+
+.bird-card__image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bird-card:hover .bird-card__image-wrap img {
+    transform: scale(1.04);
+}
+
+.bird-card__img-placeholder {
+    background: linear-gradient(135deg, var(--color-surface-offset) 0%, var(--color-surface-dynamic) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-text-faint);
+}
+
+.bird-card__img-placeholder span {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+}
+
+.bird-card__body {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bird-card__name {
+    font-family: var(--font-display);
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 0.15rem;
+}
+
+.bird-card__sci-name {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bird-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid oklch(from currentColor l c h / 0.08);
+}
+
+.bird-card__footer {
+    padding: 0.6rem 1rem;
+    border-top: 1px solid oklch(from currentColor l c h / 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-surface-offset);
+}
+
+.bird-card__id {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.bird-card__link {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+}
+
+.bird-card__link svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* ── Sub-componente: Habitat Pill ────────────────────────────────────
+   Uso exclusivo dentro de .bird-card
+   Tokens: --color-primary, --color-surface-offset, --radius-full
+   ────────────────────────────────────────────────────────────────── */
+
+.habitat-pill {
+    background: color-mix(in oklch, var(--color-primary) 10%, var(--color-surface-offset));
+    color: var(--color-primary);
+    border-radius: var(--radius-full);
+    padding: 0.15rem 0.55rem;
+    font-size: clamp(0.65rem, 1.5vw, 0.72rem);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.habitat-pill svg {
+    width: 10px;
+    height: 10px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+@media (max-width: 768px) {
+    .bird-card__body {
+        padding: 0.85rem;
+    }
+
+    .bird-card__footer,
+    .bird-card__meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .bird-card__name {
+        font-size: 0.98rem;
+    }
+
+    .bird-card__sci-name {
+        font-size: 0.72rem;
+    }
+
+    .bird-card__footer,
+    .bird-card__meta {
+        width: 100%;
+    }
+
+    .habitat-pill {
+        padding: 0.2rem 0.5rem;
+    }
+}

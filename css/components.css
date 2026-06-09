@@ -1,0 +1,11 @@
+/* ── Componentes ──────────────────────────────────────────────────────
+   Importa todos os componentes CSS organizados por bloco BEM.
+   Ordem: header → hero → filters → bird-card → badge → empty-state
+   ────────────────────────────────────────────────────────────────── */
+
+@import url("./components/header.css");
+@import url("./components/hero.css");
+@import url("./components/filters.css");
+@import url("./components/bird-card.css");
+@import url("./components/badge.css");
+@import url("./components/empty-state.css");

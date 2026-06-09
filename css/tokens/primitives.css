@@ -43,4 +43,15 @@
     --color-black-700: #2a2822;
     --color-black-600: #2e2c26;
     --color-black-500: #3a3830;
+
+    --color-text-dark: #d8d2c0;
+    --color-text-muted-dark: #ada288;
+    --color-text-faint-dark: #5a5448;
+    --color-text-inverse-dark: #2a2820;
+    --color-primary-hover-dark: #3a9068;
+    --color-primary-active-dark: #2a7050;
+    --color-primary-highlight-dark: #213028;
+    --color-amber-highlight-dark: #3a2818;
+    --color-red-highlight-dark: #2e1818;
+    --color-blue-highlight-dark: #182438;
   }
