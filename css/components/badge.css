@@ -1,0 +1,40 @@
+/* ── Componente: Badge ───────────────────────────────────────────────
+   Bloco: .badge
+   Tokens consumidos: --radius-full, --color-primary-highlight,
+                      --color-primary, --color-blue-highlight,
+                      --color-blue-status, --color-amber-highlight,
+                      --color-amber, --color-red-highlight,
+                      --color-red-status, --color-text-muted
+   Estados: nenhum (exibição estática de status)
+   Dependências: tokens de semântica
+   Modificadores: .badge--lc, --nt, --vu, --en, --cr, --ew, --ex, --dd
+   ────────────────────────────────────────────────────────────────── */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.badge--lc { background: var(--color-primary-highlight); color: var(--color-primary); }
+.badge--nt { background: var(--color-blue-highlight);    color: var(--color-blue-status); }
+.badge--vu { background: var(--color-amber-highlight);   color: var(--color-amber); }
+.badge--en { background: var(--color-amber-highlight);   color: var(--color-amber); }
+.badge--cr { background: var(--color-red-highlight);     color: var(--color-red-status); }
+.badge--ew { background: var(--color-red-highlight);     color: var(--color-red-status); }
+.badge--ex { background: color-mix(in oklch, var(--color-text-muted) 20%, transparent); color: var(--color-text-muted); }
+.badge--dd { background: color-mix(in oklch, var(--color-text-muted) 15%, transparent); color: var(--color-text-muted); }

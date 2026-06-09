@@ -32,16 +32,16 @@ export const BIRDS_RAW = [
 ];
 
 export const STATUS_MAP = {
-    EX: { label: 'Extinct',                  cls: 'badge-ex', dot: '#6b6454' },
-    EW: { label: 'Extinct in the Wild',      cls: 'badge-ew', dot: '#8b2020' },
-    CR: { label: 'Critically Endangered',    cls: 'badge-cr', dot: '#8b2020' },
-    EN: { label: 'Endangered',               cls: 'badge-en', dot: '#b07030' },
-    VU: { label: 'Vulnerable',               cls: 'badge-vu', dot: '#a05c1a' },
-    NT: { label: 'Near Threatened',          cls: 'badge-nt', dot: '#1a5480' },
-    CD: { label: 'Conservation Dependent',   cls: 'badge-nt', dot: '#1a5480' },
-    LC: { label: 'Least Concern',            cls: 'badge-lc', dot: '#2d6a4f' },
-    DD: { label: 'Data Deficient',           cls: 'badge-dd', dot: '#6b6454' },
-    NE: { label: 'Not Evaluated',            cls: 'badge-dd', dot: '#6b6454' },
+    EX: { label: 'Extinct',                  cls: 'badge--ex', dot: '#6b6454' },
+    EW: { label: 'Extinct in the Wild',      cls: 'badge--ew', dot: '#8b2020' },
+    CR: { label: 'Critically Endangered',    cls: 'badge--cr', dot: '#8b2020' },
+    EN: { label: 'Endangered',               cls: 'badge--en', dot: '#b07030' },
+    VU: { label: 'Vulnerable',               cls: 'badge--vu', dot: '#a05c1a' },
+    NT: { label: 'Near Threatened',          cls: 'badge--nt', dot: '#1a5480' },
+    CD: { label: 'Conservation Dependent',   cls: 'badge--nt', dot: '#1a5480' },
+    LC: { label: 'Least Concern',            cls: 'badge--lc', dot: '#2d6a4f' },
+    DD: { label: 'Data Deficient',           cls: 'badge--dd', dot: '#6b6454' },
+    NE: { label: 'Not Evaluated',            cls: 'badge--dd', dot: '#6b6454' },
 };
 
 export const STATUS_NAME_TO_CODE = {

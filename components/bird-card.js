@@ -12,9 +12,9 @@ function normaliseStatus(raw) {
 function getStatusBadge(raw) {
     if (!raw || !raw.trim()) return '';
     const code = normaliseStatus(raw);
-    const s = STATUS_MAP[code] || { label: code, cls: 'badge-dd', dot: '#6b6454' };
+    const s = STATUS_MAP[code] || { label: code, cls: 'badge--dd', dot: '#6b6454' };
     return `<span class="badge ${s.cls}" aria-label="Conservation status: ${s.label}">
-        <span class="badge-dot" style="background:${s.dot};"></span>
+        <span class="badge__dot" style="background:${s.dot};"></span>
         ${s.label}
     </span>`;
 }
@@ -28,7 +28,7 @@ function placeholderSVG() {
 }
 
 function getPlaceholderHTML(name) {
-    return `<div class="card-image-wrap img-placeholder" aria-hidden="true" role="img" aria-label="No image available for ${name}">
+    return `<div class="bird-card__image-wrap bird-card__img-placeholder" aria-hidden="true" role="img" aria-label="No image available for ${name}">
         ${placeholderSVG()}
         <span>No photo available</span>
     </div>`;
@@ -47,7 +47,7 @@ export function createCard(bird, index) {
     let imageHTML;
     if (bird.image) {
         imageHTML = `
-        <div class="card-image-wrap">
+        <div class="bird-card__image-wrap">
             <img
                 src="${bird.image}"
                 alt="${bird.common_name}"
@@ -72,19 +72,19 @@ export function createCard(bird, index) {
 
     card.innerHTML = `
         ${imageHTML}
-        <div class="card-body">
+        <div class="bird-card__body">
             <div>
-                <h2 class="card-name">${bird.common_name}</h2>
-                <p class="card-sci-name">${bird.scientific_name}</p>
+                <h2 class="bird-card__name">${bird.common_name}</h2>
+                <p class="bird-card__sci-name">${bird.scientific_name}</p>
             </div>
-            <div class="card-meta">
+            <div class="bird-card__meta">
                 ${habitatHTML}
                 ${statusHTML}
             </div>
         </div>
-        <div class="card-footer">
-            <span class="card-id">ID #${bird.id}</span>
-            <span class="card-link">
+        <div class="bird-card__footer">
+            <span class="bird-card__id">ID #${bird.id}</span>
+            <span class="bird-card__link">
                 View details
                 <i data-lucide="arrow-right"></i>
             </span>
