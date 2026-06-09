@@ -46,6 +46,7 @@ export function createCard(bird, index) {
 
     let imageHTML;
     if (bird.image) {
+        const loadMode = index < 6 ? 'eager' : 'lazy';
         imageHTML = `
         <div class="bird-card__image-wrap">
             <img
@@ -53,7 +54,7 @@ export function createCard(bird, index) {
                 alt="${bird.common_name}"
                 width="280"
                 height="210"
-                loading="lazy"
+                loading="${loadMode}"
                 decoding="async"
                 onerror="this.parentElement.outerHTML = getPlaceholderHTML('${bird.common_name}')"
             >
