@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bird Guide</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300..600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300..600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="modulepreload" href="js/main.js">
+    <link rel="modulepreload" href="data/data.js">
+    <link rel="modulepreload" href="components/bird-card.js">
+
+    <link rel="preload" as="image" href="images/Common_pauraque_Nyctidromus_albicollis_yucatanensis_Orange_Walk_jtYFO8Z.webp">
+
+    <link rel="stylesheet" href="css/critical.css">
+
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 </head>
 
 <body>
@@ -43,7 +50,7 @@
                   aria-describedby="search-help"
                 >
               </div>
-              
+
               <p id="search-help" class="sr-only">
                 Type a bird name to filter the list.
               </p>
@@ -83,6 +90,60 @@
 
 <main id="main-content" class="main-content">
     <div id="bird-grid" class="bird-grid">
+        <div class="skeleton-card" aria-hidden="true">
+            <div class="bird-card__image-wrap"><div class="skeleton" aria-hidden="true"></div></div>
+            <div class="bird-card__body">
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="bird-card__meta"><div class="skeleton" aria-hidden="true"></div></div>
+            </div>
+            <div class="bird-card__footer"><div class="skeleton" aria-hidden="true"></div></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+            <div class="bird-card__image-wrap"><div class="skeleton" aria-hidden="true"></div></div>
+            <div class="bird-card__body">
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="bird-card__meta"><div class="skeleton" aria-hidden="true"></div></div>
+            </div>
+            <div class="bird-card__footer"><div class="skeleton" aria-hidden="true"></div></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+            <div class="bird-card__image-wrap"><div class="skeleton" aria-hidden="true"></div></div>
+            <div class="bird-card__body">
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="bird-card__meta"><div class="skeleton" aria-hidden="true"></div></div>
+            </div>
+            <div class="bird-card__footer"><div class="skeleton" aria-hidden="true"></div></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+            <div class="bird-card__image-wrap"><div class="skeleton" aria-hidden="true"></div></div>
+            <div class="bird-card__body">
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="bird-card__meta"><div class="skeleton" aria-hidden="true"></div></div>
+            </div>
+            <div class="bird-card__footer"><div class="skeleton" aria-hidden="true"></div></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+            <div class="bird-card__image-wrap"><div class="skeleton" aria-hidden="true"></div></div>
+            <div class="bird-card__body">
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="bird-card__meta"><div class="skeleton" aria-hidden="true"></div></div>
+            </div>
+            <div class="bird-card__footer"><div class="skeleton" aria-hidden="true"></div></div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+            <div class="bird-card__image-wrap"><div class="skeleton" aria-hidden="true"></div></div>
+            <div class="bird-card__body">
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="skeleton" aria-hidden="true"></div>
+                <div class="bird-card__meta"><div class="skeleton" aria-hidden="true"></div></div>
+            </div>
+            <div class="bird-card__footer"><div class="skeleton" aria-hidden="true"></div></div>
+        </div>
     </div>
 
     <div id="empty-state" class="empty-state">
@@ -100,7 +161,7 @@
             Helping birders identify and protect avian species worldwide.
           </p>
         </div>
-  
+
         <nav class="footer__nav" aria-label="Footer">
           <ul class="footer__links" role="list">
             <li><a href="#">About</a></li>
@@ -109,10 +170,11 @@
           </ul>
         </nav>
       </div>
-  
+
       <p class="footer__meta">© 2026 Bird Guide</p>
     </div>
   </footer>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
