@@ -37,7 +37,6 @@ css/
     spacing.css       radius e spacing scale
   reset.css           reset CSS moderno
   base.css            estilos base (html, body, tipografia)
-  components.css      entry point que importa todos os componentes
   components/
     header.css        BEM: .header
     hero.css          BEM: .hero
